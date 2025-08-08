@@ -21,7 +21,8 @@
 
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepare": "npm run clean && npm run build"
   },
 
   "peerDependencies": {
