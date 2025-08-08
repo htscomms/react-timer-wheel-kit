@@ -1,3 +1,4 @@
+/* TimerWheelView.css */
 .tw-wheel-container {
   position: relative;
   width: 260px; height: 260px;
@@ -12,6 +13,18 @@
 .tw-overlay-content { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .tw-delta { font-size: 1.5rem; font-weight: bold; }
 .tw-cost  { font-size: 1rem; }
-.tw-bar-bg { background: rgba(0,0,0,0.1); border-radius: 999px; overflow: hidden; }
-.tw-bar-fill { background: teal; transition: width linear 2s; }
+
+/* Make the confirm bar a fixed-size track; the fill grows from the left */
+.tw-bar-bg { 
+  background: rgba(0,0,0,0.1); 
+  border-radius: 999px; 
+  overflow: hidden; 
+}
+.tw-bar-fill { 
+  background: teal; 
+  width: 0%;               /* start empty */
+  height: 100%;
+  transition: width linear 2s; /* animation duration */
+}
+
 .tw-arrow { font-size: 2rem; color: rgba(0,0,0,0.4); }
